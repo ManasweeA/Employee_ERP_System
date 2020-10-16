@@ -1,0 +1,554 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+{%  include "header.html" %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>friday</title>
+<style>
+body{
+  top: 0px;
+  left: 0px;
+  width: 1366px;
+  height: 768px;
+  background: #F5F7F8 0% 0% no-repeat padding-box;
+  opacity: 1;
+  }
+
+.sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  list-style-type:none;
+}
+        
+nav{
+  top: 0px;
+  left: 0px;
+  width: 1530px;
+  height: 80px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;    
+}
+
+nav a{
+  font:Helvetica Neue;
+  font-size:25px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+.main {
+  margin-left: 160px;
+  padding-top: 20px;
+}
+
+p{
+  font:Helvetica Neue;
+  font-size:15px;
+  left:120px;
+  padding-left:10px;
+}
+
+.card + .card{
+  margin: 0 0 2px 2px;
+}
+
+.card{
+  left:120px;
+  width:80px;
+  height:120px;
+  border-color:#F5F7F8;
+  box-shadow: 0px 3px 10px #DBE6EBCC;
+}
+
+.sidenav-right{
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
+  right: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+.card-deck{
+  width:1100px;
+  
+}
+
+h2{
+  padding-left:100px;
+  padding-top:10px;
+  text-align:center;  
+  font:Helvetica Neue;
+  color:#28AA8E;
+  text-decoration:underline;
+}
+
+h3{
+  font:Helvetica Neue;
+  color:#4F4F58;
+  padding-left:10px;
+  font-size:20px;
+}
+
+.nav-item{
+  text-align:left;
+  top:30px;
+  font:Helvetica Neue;
+  color:#808080;
+  font-size:20px;
+}
+.card-body a{
+  width:20px;
+  padding-left:10px;
+  padding-top:10px;
+  font-size:30px;
+  font:Helvetica Neue;
+}
+.dropbtn {
+  margin-left:430px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  height: 45px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #BDBDBD;
+  opacity: 1;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 122px;
+height: 18px;
+text-align: left;
+font: 16px/18px Helvetica Neue;
+letter-spacing: 0px;
+color: #4F4F58;
+opacity: 1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<nav>
+    
+  <img src="/static/friday/img/simple-green-stamp.png" style="top: 0px;left: 10px;width: 80px;height: 80px;opacity: 1;">
+    <a href="#" style="padding-left:40px;top: 0px;left: 116px;height: 26px;text-align: left;letter-spacing: 0px;color: #4F4F58;opacity: 1;font-size:30px">Calendar</a>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn dropdown-toggle">Attendence wise</button>
+      <div id="myDropdown" class="dropdown-content dropdown-menu" style="margin-left:400px; height: 100px; width: 200px;">
+        <a href="#home">Attendence wise</a>
+        <a href="#about">Schedule wise</a>
+       
+      </div>
+    </div>
+    <a href="#"  style="padding-left:300px;top: 0px;left: 450px;width: 24px;height: 25px; opacity: 1"><img src="/static/friday/img/bell.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 500px;width: 24px;height: 25px; opacity: 1;"><img src="/static/friday/img/user.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 550px;width: 24px;height: 27px;opacity: 1;"><img src="/static/friday/img/chat.svg"></a>
+   
+   
+</nav>
+
+<div class="sidenav" onclick()="dashboard.html">
+<img src="/static/friday/img/simple-green-stamp.png" style="top: 0px;left: 10px;width: 840px;height: 80px;opacity: 1;">
+  <li class="sidenav-item">
+    <a class="sidenav-link active" href="#" style="margin-top:30px"><img src="/static/friday/img/dashboard (1).svg"></a>
+  </li>
+  <li class="sidenav-item">
+    <a class="sidenav-link" href="#" style="margin-top:20px"><img src="/static/friday/img/analytics.svg"></a>
+  </li>
+  <li class="sidenav-item">
+    <a class="sidenav-link" href="#" style="margin-top:20px"><img src="/static/friday/img/calendar (1).svg"></a>
+  </li>
+</div>
+
+<div class="sidenav-right" style="display:none" id="mySidebar">
+  <button type="btn-lg" onclick="w3_close()" class="close" style="background:white;width:30px;height:30px;border:0px">
+  <span arial-hidden="true">&times;</span>
+  </button>
+  <p class="text-muted">Details for</p>
+  <h3>Today, 12 August 2020</h3>
+  <p style="font-size:20px;color:#28AA8E;padding-left:170px;padding-top:20px;opacity:1;text-decoration:underline"><b>Apply Leave</b></p>
+</div>
+
+<h2>AUG 2020</h2>
+
+<ul class="nav justify-content-left">
+  <li class="nav-item" style="left:120px">
+    <a class="nav-content">Sun</a>
+  </li>
+  <li class="nav-item" style="left:240px">
+    <a class="nav-content">Mon</a>
+  </li>
+  <li class="nav-item" style="left:340px">
+    <a class="nav-content">Tue</a>
+  </li>
+  <li class="nav-item" style="left:440px">
+    <a class="nav-content">Wed</a>
+  </li>
+  <li class="nav-item" style="left:540px">
+    <a class="nav-content">Thu</a>
+  </li>
+  <li class="nav-item" style="left:640px">
+    <a class="nav-content">Fri</a>
+  </li>
+  <li class="nav-item" style="left:750px">
+    <a class="nav-content">Sat</a>
+  </li>
+</ul>
+
+<div class="card-deck">
+    <div class="card" style="top:30px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">26</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background: #FD6C21 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+    <div class="card" style="top:30px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">27</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background: #00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+        <p class="text-muted" style="font-size:10px;color:B8B8B8;padding-left:70px;padding-top:10px;opacity:0.3">Applied:AL</p>
+      </div>
+    </div>
+
+    <div class="card" style="top:30px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">28</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:30px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">29</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:30px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">30</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background: #00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:30px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">31</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:30px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">01</a>
+      </div>
+    </div>
+</div> 
+   
+<div class="card-deck">
+    <div class="card" style="top:33px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">02</a>
+      </div>
+    </div>
+    <div class="card" style="top:33px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">03</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:33px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">04</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:33px;background:#F5F7F8">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">05</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background: #FD6C21 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+        <p style="font-size:11px;color:#28AA8E;padding-left:60px;padding-top:10px;opacity:1;text-decoration:underline"><b>Apply Leave</b></p>
+      </div>
+    </div>
+
+    <div class="card" style="top:33px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">06</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:33px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">07</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:33px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">08</a>
+      </div>
+    </div>
+</div> 
+
+<div class="card-deck">
+    <div class="card" style="top:36px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">09</a>
+      </div>
+    </div>
+    <div class="card" style="top:36px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">10</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:36px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">11</a>
+        <hr style="width: 35px;margin-right:85px;height: 7px;background:#00C100 0% 0% no-repeat padding-box;border-radius: 10px;
+        opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="card" style="top:36px;background:#28AA8E">
+      <div class="card-body">
+        <a style="color:#FFFFFF;opacity:1" onclick="w3_open()">12</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:36px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">13</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:36px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">14</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:36px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">15</a>
+      </div>
+    </div>
+</div> 
+
+<div class="card-deck">
+    <div class="card" style="top:39px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">16</a>
+      </div>
+    </div>
+    <div class="card" style="top:39px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">17</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:39px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">18</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:39px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">19</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:39px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">20</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:39px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">21</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:39px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">22</a>
+      </div>
+    </div>
+</div> 
+
+<div class="card-deck">
+    <div class="card" style="top:42px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">23</a>
+      </div>
+    </div>
+    <div class="card" style="top:42px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">24</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:42px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">25</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:42px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">26</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:42px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">27</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:42px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">28</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:42px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">29</a>
+      </div>
+    </div>
+</div> 
+
+<div class="card-deck">
+    <div class="card" style="top:45px;background:#FCFCFC;margin-right:0px">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">30</a>
+      </div>
+    </div>
+    <div class="card" style="top:45px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.6">31</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:45px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">01</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:45px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">02</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:45px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">03</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:45px;background:#FFFFFF">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">04</a>
+      </div>
+    </div>
+
+    <div class="card" style="top:45px;background:#FCFCFC">
+      <div class="card-body">
+        <a style="color:#B8B8B8;opacity:0.3">05</a>
+      </div>
+    </div>
+</div> 
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+  </script>
+</body>
+</html> 

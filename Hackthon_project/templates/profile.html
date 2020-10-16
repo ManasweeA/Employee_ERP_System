@@ -1,0 +1,242 @@
+{%load static %}
+<!DOCTYPE html>
+<head>
+    {%  include "header.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>friday</title>
+    <style>
+        body{
+        top: 0px;
+        left: 0px;
+        width: 1366px;
+        height: 768px;
+        background: #F5F7F8 0% 0% no-repeat padding-box;
+        opacity: 1;
+        }
+        nav{
+            top: 0px;
+            left: 0px;
+            width: 1530px;
+            height: 80px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+       
+        li a.active{
+          background: #FFFFFF;
+          border: 0px 1px solid #28aa8e;
+        }
+        p{
+          font:Helvetica Neue;
+          font-size:15px;
+          left:20px;
+          padding-left:20px;
+        }
+        nav a{
+          font:Helvetica Neue;
+          font-size:25px;
+        }
+        
+      .vertical{
+        width:2px;
+        height:90px;
+        left:110px;
+      }
+      h5{
+        top: 30px;
+left:0px;
+width: 1900px;
+height: 50px;
+text-align: left;
+font: Bold 14px/17px Helvetica Neue;
+letter-spacing: 0px;
+color: #4F4F58;
+opacity: 1;
+position: relative;
+      }
+      
+      
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="/static/simple-green-stamp@2x.png" style="top: 0px;left: 10px;width: 80px;height: 80px;opacity: 1;">
+    <a href="#" style=" padding-left:40px;top: 0px;left: 116px;height: 26px;text-align: left;letter-spacing: 0px;color: #4F4F58;opacity: 1;">My Profile</a>
+   <a href="#"  style="padding-left:920px;top: 0px;left: 450px;width: 24px;height: 25px; opacity: 1"><img src="/static/bell.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 500px;width: 24px;height: 25px; opacity: 1;"><img src="/static/user.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 550px;width: 24px;height: 27px;opacity: 1;"><img src="/static/chat.svg"></a>
+   
+</nav>
+
+
+  
+<div class="row">
+    <div class="col-1">
+<div class="sidebar">
+<ul class="nav flex-column" style="top: 0px;left: 0px;width: 80px;height: 769px;background: #FFFFFF 0% 0% no-repeat padding-box;opacity: 1;" onclick()="projects.html">
+  <li class="nav-item">
+    <a class="nav-link active" href="#" style="top: 30px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/dashboard.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"style="top: 80px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/analytics.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"style="top: 125px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/calendar.svg"></a>
+  </li>
+</ul>
+</div>
+</div>
+<div class="col-11">
+    <h5>------------------------------------------------------------------------------------------------------------------PERSONAL INFORMATION-----------------------------------------------------------------------------------------------------------------</h5>
+    <form>
+        <div class="form-row">
+            <img src="/static/userp.png" style="top: 157px;left: 132px;width: 50px;background: #FFFFFF;
+            height: 55px;border-radius:100%;padding: 8px 8px 8px 8px;margin-top:10px;
+            opacity: 1;">
+          <div class="form-group col-2">
+           
+            <label for="inputEmail4" style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+            font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">FIRST NAME</label>
+            <input value="John " class="form-control" id="inputEmail4" style="top: 167px;
+            left: 200px;text-align: left;font-size:20px;font-family: Arial, Helvetica, sans-serif;letter-spacing: 0px;
+            color: #67696D;opacity: 1;width: 250px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #EEEEEE;opacity: 1;">
+          </div>
+          <div class="form-group col-2">
+            <label for="inputPassword4"style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+            font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1; margin-left:80px">LAST NAME</label>
+            <input value="Doe" class="form-control" id="inputPassword4" style="top: 167px;left: 537px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+            width: 190px;margin-left:80px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #EEEEEE;opacity: 1;">
+          </div>
+          <div class="form-group col-sm-2">
+            <label for="inputPassword4"style="text-align: left;font-family:Arial, Helvetica, sans-serif;margin-left:100px;width:200px;
+            font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">FATHER'S/SPOUSE NAME</label>
+            <input value="Mark" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+            width: 191px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left:100px;
+            border: 1px solid #EEEEEE;opacity: 1;">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPassword4"style="text-align: left;font-family:Arial, Helvetica, sans-serif;margin-left:130px;
+            font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">EMPLOYEEE ID</label>
+            <input value="emp_001" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+            width: 190px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left: 130px;
+            border: 1px solid #EEEEEE;opacity: 1;">
+          </div>
+          
+        </div>
+        <div class="form-row">
+        <div class="form-group col-2" style="margin-top: 10px;">
+            <div class="col">
+                <label for="inputPassword4"style="margin-left:33px;text-align: left;font-family:Arial, Helvetica, sans-serif;
+                font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">JOINED ON</label>
+                <input value="01-06-2015" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                width: 190px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left:33px;
+                border: 1px solid #EEEEEE;opacity: 1;">
+        </div>
+        </div>
+        <div class="form-group col-2" style="margin-top: 10px;">
+            <div class="col">
+                <label for="inputPassword4"style="margin-left:110px;text-align: left;font-family:Arial, Helvetica, sans-serif;width:100px;
+                font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">EMAIL ADDRESS</label>
+                <input value="johndoe@gmail.com" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                width: 230px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left:110px;
+                border: 1px solid #EEEEEE;opacity: 1;">
+        </div>
+        </div>
+        <div class="form-group col-2" style="margin-top: 10px;">
+            <div class="col">
+                <label for="inputPassword4"style="margin-left:150px;text-align: left;font-family:Arial, Helvetica, sans-serif;width:150px;
+                font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">CONTACT NUMBER</label>
+                <input value="1234567893" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                width: 190px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left:150px;
+                border: 1px solid #EEEEEE;opacity: 1;">
+        </div>
+        </div>
+        <div class="form-group col-2" style="margin-top: 10px;">
+            <div class="col">
+                <label for="inputPassword4"style="margin-left:165px;text-align: left;font-family:Arial, Helvetica, sans-serif;width:600px;
+                font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">EMERGENCY CONTACT</label>
+                <input value="" class="form-control" id="inputPassword4" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                width: 190px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left:165px;
+                border: 1px solid #EEEEEE;opacity: 1;">
+        </div>
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-2" style="margin-top: 10px;margin-left:35px">
+            <h5>POSTAL ADDRESS</h5>
+          <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;width:600px;
+          font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">FLAT NO./APARTMENT/BUILDING</label>
+          <input type="" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+          width: 500px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: 1px solid #EEEEEE;opacity: 1;">
+          </div>
+          <div class="form-group col-2" style="margin-top: 65px;margin-left:340px">
+          <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;width:1000px;
+          font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">LOCALITY/AREA/LOCATION/LANDMARK</label>
+          <input type="" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+          width: 420px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: 1px solid #EEEEEE;opacity: 1;">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-2" style="margin-top: 10px;margin-left:35px">
+          <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+          font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">PINCODE</label>
+          <input type="" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+          width: 150px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: 1px solid #EEEEEE;opacity: 1;">
+    
+          </div>
+          <div class="form-group col-4" style="margin-top: 10px;margin-left:0px">
+            <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+            font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">CITY</label>
+            <input value="Pune" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+            width: 150px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #EEEEEE;opacity: 1;">
+            </div>
+            <div class="form-group col-2" style="margin-top: 10px;margin-left:0px">
+                <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+                font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">STATE</label>
+                <input value="Maharashtra" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                width: 200px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #EEEEEE;opacity: 1;">
+                </div>
+                <div class="form-group col-2" style="margin-top: 10px;margin-left:0px">
+                    <label for="inputAddress2" style="text-align: left;font-family:Arial, Helvetica, sans-serif;
+                    font-size: 12px;letter-spacing: 0px;color: #4F4F58;opacity: 1;">COUNTRY</label>
+                    <input value="India" class="form-control" style="top: 167px;font-size:20px;font-family: Arial, Helvetica, sans-serif;
+                    width: 150px;height: 40px;background: #FFFFFF 0% 0% no-repeat padding-box;
+                    border: 1px solid #EEEEEE;opacity: 1;">
+                    </div>
+        </div>
+    
+        
+      </form>
+      <h5>-----------------------------------------------------------------------------------------------------------------------ACHIEVEMENTS-------------------------------------------------------------------------------------------------------------------------</h5>
+      <div class="row">
+      <img src="/static/goal.svg">
+      <a href="#" style="top: 0px;margin-left:10px;
+      left: 0px;
+      width: 186px;
+      height: 24px;
+      text-align: left;
+      font: Bold 20px/17px Helvetica Neue;
+      letter-spacing: 0px;
+      color: #4F4F58;">BEST PERFORMER <p style="text-align: left;margin-right:0px;margin-top:10px;
+font: Bold 14px/17px Helvetica Neue;
+letter-spacing: 0px;
+color: #4F4F58;">For Quarter Jan20-Mar20</p></a>
+      
+      </div>
+</div>
+
+  
+</body>
+</html>

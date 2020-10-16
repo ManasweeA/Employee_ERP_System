@@ -1,0 +1,279 @@
+{%load static %}
+<!DOCTYPE html>
+<head>
+    {%  include "header.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <title>friday</title>
+    <style>
+        body{
+        top: 0px;
+        left: 0px;
+        width: 1340px;
+        height: 560px;
+        background: #F5F7F8 0% 0% no-repeat padding-box;
+        opacity: 1;
+        }
+        nav{
+            top: 0px;
+            left: 0px;
+            width: 1310px;
+            height: 90px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+       
+         ul li a{
+        
+          border: 0px 5px;
+        }
+        
+        
+        .dot{
+          height: 13px;
+          width:13px;
+          background: red;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .notification:active{
+          color:white;
+        
+        }
+        
+        
+        
+        nav a img{
+          background-color: #F5F7F8;
+          background-origin: border-box;
+          border-radius: 200%;
+          padding:10px 10px 10px 10px;
+          
+          
+        }
+        nav a img:active{
+          background-color: #28AA8E;
+          border-bottom:3px solid #28AA8E
+          
+        }
+        
+    </style>
+</head>
+<body>
+  <nav class="nav" style="top: 0px;left: 0px;width: 1360px;height: 90px;background: #FFFFFF 0% 0% no-repeat padding-box;opacity: 1;">
+    <img src="/static/simple-green-stamp@2x.png" style="top: 0px;left: 10px;width: 80px;height: 80px;opacity: 1;">
+    <a href="#" style=" padding-left:40px;margin-top: 25px;left: 116px;height: 26px;text-align: left;font: 25px Helvetica Neue;letter-spacing: 0px;color: #4F4F58;opacity: 1;">Dashboard</a>
+
+    
+  
+
+<ul class="nav justify-content-end" style="padding-left:850px">
+   
+    <li class="nav-item" >
+      <div class="dropdown">
+        <span class="e-badge e-badge-success e-badge-overlap e-badge-dot" style=" height: 12px;width:12px;
+            background: red;border-radius: 50%;display: inline-block;margin:0px 0px -5px 40px"></span>
+      
+      <a class="nav-link " href="#" data-toggle="dropdown" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" style="background:#FFFFFF; margin-top: -12px;" ><img src="/static/bell.svg" id="passicon" onclick="myfunction()"></a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="font-size: 20px; margin-top:20px; height: 330px; width: 400px;">
+        
+
+        <a class="dropdown-item" href="#" style="word-spacing: 190px;text-align: left;font: Bold 30px/37px Helvetica Neue;
+        letter-spacing: 0px;color: #67696D;opacity: 1;">Notification 2</a>
+
+        <hr style="top: 164px;left: 948px;width: 390px;height: 0px;border: 1px solid #BDBDBD;opacity: 1;">
+        <a class="dropdown-item" href="#" style="text-align: left;font: Bold 16px/19px Helvetica Neue;
+        letter-spacing: 0px;color: #67696D;opacity: 1;">meeting reminder</a>
+        <a class="dropdown-item" href="#" style="text-align: left;font:  15px Helvetica Neue;
+        letter-spacing: 0px;color: #67696D;opacity: 1;">Daily status call</a>
+        <a class="dropdown-item" href="#" style="text-align: left;text-decoration: underline;
+        font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;color: #0F6452;opacity: 1;">JOIN</a>
+        <a class="dropdown-item" href="javascript:void(0)" style="top: 253px;left: 1219px;width: 118px;height: 15px;
+        text-align: left;font:  Italic 12px Helvetica Neue;letter-spacing: 0px;color: #67696D;
+        opacity: 1;padding-left:280px;padding-top:20px">09:00 A.M |Aug 15,'20</a>
+    
+      <hr style="top: 164px;left: 948px;width: 300px;height: 0px;border: 1px solid #BDBDBD;opacity: 1;margin-top: 20px;">
+     
+     <a class="dropdown-item" href="javascript:void(0)" style="top: 305px;left: 987px;width: 100px;height: 19px;
+      text-align: left;font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;color: #67696D;opacity: 1;">New Quiz Out</a>
+     <a class="dropdown-item" href="javascript:void(0)" style="top: 0px;left: 0px;width: 176px;height: 19px;
+     text-align: left;font: 15px Helvetica Neue;letter-spacing: 0px;color: #67696D;padding-top:13px;">Here's new quiz for you</a>
+      <a class="dropdown-item" href="javascript:void(0)" style="top: 0px;left: 176px;width: 70px;height: 19px;
+      text-align: left;text-decoration: underline;font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;
+      color: #0F6452;padding-top:20px">TRY OUT</a>
+      <a class="dropdown-item" href="javascript:void(0)" style="top: 375px;left: 1219px;width: 118px;height: 15px;
+      text-align: left;font: Italic 12px Helvetica Neue;letter-spacing: 0px;color: #67696D;
+      opacity: 1;padding-left:280px;padding-top:20px">09:00 A.M |Aug 15,'20</a>  
+      </div>
+    </div>      
+    </li>
+    <li class="nav-item">
+      <div class="dropdown">
+      <a class="nav-link" href="#" data-toggle="dropdown" id="navbarDropdownMenu" aria-haspopup="true" aria-expanded="false" style="background:#FFFFFF;margin-top: 4px;padding-left:20px"><img src="/static/user.svg" id="passicon1" onclick="myfunction1()"></a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 20px; margin-top:20px; height: 550px; width: 220px;">
+       <div class="column">
+      <a class="dropdown-item " href="/profile" style="text-align: left;font: Bold 30px/37px Helvetica Neue;letter-spacing: 0px;
+      color: #67696D;opacity: 1;">John Doe<img src="/static/down-arrow.svg"  href="#" style="float:right;background-color: #FFFFFF;"></a> 
+      </div>
+      <a class="dropdown-item" href="#" style="opacity: 1;"></a>
+      <a class="dropdown-item dropdown-menu-right" href="#" style="text-align: left;font: Bold 16px/19px Helvetica Neue;
+      letter-spacing: 0px;color: #67696D;opacity: 1;">Sr. Consultant </a>
+
+      <hr style="border: 1px solid #BDBDBD;opacity: 1;">
+
+      <a class="dropdown-item" href="#" style=" margin-left:20px;text-align: left;font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;
+      color: #67696D;opacity: 1;">Privacy policy</a>
+
+      <hr style=" width:150px;border: 0.2px solid #EEEEEE;opacity: 1;">
+
+      <a class="dropdown-item" href="#" style="margin-left:20px;text-align: left;font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;
+      color: #67696D;opacity: 1;">Terms of use</a>
+
+      <hr style=" width:150px;border: 0.2px solid #EEEEEE;opacity: 1;">
+    
+      <hr style=" width:150px;border: 0.2px solid #EEEEEE;opacity: 1; margin-top:250px">
+    
+      <a class="dropdown-item" href="#" style="text-align: left;font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;
+      color: #67696D;opacity: 1;"><img src="/static/logout.svg" style="background-color: #FFFFFF; border-radius: 250%;">Sign Out</a>
+   
+   <hr style=" width:150px;border: 0.2px solid #EEEEEE;opacity: 1;margin-top:-3px">
+
+   <a class="nav-link active" href="#" style="margin-left:13px;top: 743px;left: 30px;width: 160px;height: 14px;text-align: left;font: 10px Helvetica Neue;letter-spacing: 0px;color: #4F4F58;opacity: 1;padding-top: 0px;text-align:left;">Created with<img src="/static/heart.svg" style=" width:30px;background-color: #FFFFFF;"> by <u style="font: 10px Helvetica Neue;letter-spacing: 0px;color: #2E788A;opacity: 1;">Outliers</u></a>
+    
+  
+  </li>
+  </div>
+    <li class="nav-item">
+      <div class="dropdown">
+        <a class="nav-link" href="#" data-toggle="dropdown" id="navbarDropdownMenu" aria-haspopup="true" aria-expanded="false" style="background:#FFFFFF;padding-left: 20px;margin-top:4px"><img src="/static/chat.svg" id="passicon2" onclick="myfunction2()"></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="font-size: 20px; margin-top:75px;width: 935px;height: 540px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 16px #DBE6EBCC;opacity: 1;">
+        
+        <a class="dropdown-item " href="#" style="text-align: left;font: Condensed Bold 26px/32px Helvetica Neue;
+        letter-spacing: 0px;color: #4F4F58;opacity: 1;">Chats<button type="button" class="btn btn-outline-success" style="float:right;width:80px;font-size:13px">create group</button></a>
+
+        <hr style="width:933px;border: 0.2px solid #BDBDBD;opacity: 1;"> 
+
+        
+        <img src="/static/user.svg" style=" border-radius: 200%; 
+        background-color: #F5F7F8;margin-left:20px;width: 24px;height: 27px;opacity: 1;"><a style="text-align: left;
+        font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;color: #67696D;opacity: 1;margin-left:20px;">Anagha Jagtap</a>
+        <a style="text-align: right;
+        font: Italic 12px/14px Helvetica Neue;
+        letter-spacing: 0px;
+        color: #67696D;
+        opacity: 1;padding-left: 650px;"> 11 Aug 2020; 13:00</a>
+        <a  class="dropdown-item" style="margin-left: 50px;text-align: left;
+        font: 16px/18px Helvetica Neue;width:880px;
+        letter-spacing: 0px;
+        color: #67696D;
+        opacity: 1;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s…</a>
+      
+
+       <hr style="width:933px;border: 1px solid #EEEEEE;opacity: 1;">
+        
+       <img src="/static/user2.png" style=" border-radius: 200%; 
+       background-color: #F5F7F8;margin-left:10px;width: 35px;height: 35px;opacity: 1;"><a style="text-align: left;
+       font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;color: #67696D;opacity: 1;margin-left:20px;">Project group</a>
+       <a style="text-align: right;
+       font: Italic 12px/14px Helvetica Neue;
+       letter-spacing: 0px;
+       color: #67696D;
+       opacity: 1;padding-left: 660px;"> 11 Aug 2020; 12:00</a>
+       <a  class="dropdown-item" style="margin-left: 50px;text-align: left;
+       font: 16px/18px Helvetica Neue;width:880px;
+       letter-spacing: 0px;
+       color: #67696D;
+       opacity: 1;">Lorem Ipsum is simply dummy text of the printing and typesetting.</a>
+     
+
+      <hr style="width:933px;border: 1px solid #EEEEEE;opacity: 1;">
+       
+      <img src="/static/user.svg" style=" border-radius: 200%; 
+      background-color: #F5F7F8;margin-left:20px;width: 24px;height: 27px;opacity: 1;"><a style="text-align: left;
+      font: Bold 16px/19px Helvetica Neue;letter-spacing: 0px;color: #67696D;opacity: 1;margin-left:20px;">Jacob Neilsen</a>
+      <a style="text-align: right;
+      font: Italic 12px/14px Helvetica Neue;
+      letter-spacing: 0px;
+      color: #67696D;
+      opacity: 1;padding-left: 660px;"> 11 Aug 2020; 11:58</a>
+      <a  class="dropdown-item" style="margin-left: 50px;text-align: left;
+      font: 16px/18px Helvetica Neue;width:880px;
+      letter-spacing: 0px;
+      color: #67696D;
+      opacity: 1;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s…</a>
+    
+
+     <hr style="width:933px;border: 1px solid #EEEEEE;opacity: 1;">
+
+  </div>
+    </li>
+    
+  </ul>
+</nav>
+  
+     
+    
+<ul class="nav flex-column" style="top: 0px;left: 0px;width: 80px;height: 750px;background: #FFFFFF 0% 0% no-repeat padding-box;opacity: 1;">
+  <li class="nav-item">
+    <a class="nav-link active" href="dashboard.html" style="top: 30px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/dashboard.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="#"style="top: 80px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/analytics.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="#"style="top: 125px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/calendar.svg"></a>
+  </li>
+</ul>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script> 
+   $(function () {
+  $('.popover-notification').popover()
+})
+function myfunction() {
+        
+        
+        var y = document.getElementById("passicon");
+        if (y.getAttribute('src') === "/static/bell.svg") {
+        y.src = "/static/bell1.svg";
+        }  else {
+            y.src = "/static/bell.svg";
+        }
+        }
+function myfunction1() {
+        
+        
+        var y = document.getElementById("passicon1");
+        if (y.getAttribute('src') === "/static/user.svg") {
+        y.src = "/static/user1.svg";
+        }  else {
+            y.src = "/static/user.svg";
+        }
+        } 
+        function myfunction2() {
+        
+        
+        var y = document.getElementById("passicon2");
+        if (y.getAttribute('src') === "/static/chat.svg") {
+        y.src = "/static/chat1.svg";
+        }  else {
+            y.src = "/static/chat.svg";
+        }
+        }       
+        var header = document.getElementById("passicon");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementById("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+} 
+</script>
+</body>
+</html>

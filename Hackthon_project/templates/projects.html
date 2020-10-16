@@ -1,0 +1,177 @@
+{%load static %}
+<!DOCTYPE html>
+<head>
+    {%  include "header.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>friday</title>
+    <style>
+        body{
+        top: 0px;
+        left: 0px;
+        width: 1366px;
+        height: 768px;
+        background: #F5F7F8 0% 0% no-repeat padding-box;
+        opacity: 1;
+        }
+        nav{
+            top: 0px;
+            left: 0px;
+            width: 1530px;
+            height: 80px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+       
+        li a.active{
+          background: #FFFFFF;
+          border: 0px 1px solid #28aa8e;
+        }
+        p{
+          font:Helvetica Neue;
+          font-size:15px;
+          left:20px;
+          padding-left:20px;
+        }
+        nav a{
+          font:Helvetica Neue;
+          font-size:25px;
+        }
+        .dot, .dot:before, .dot:after {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 20px;
+        background-color: #28AA8E;
+      }
+
+      .dot {
+        top: 140px;
+        left: 60px;
+      }
+
+      .dot:before, .dot:after {
+        content: "";
+      }
+
+      .dot:before {
+        right: 15px;
+        transition: right .3s ease-out;
+      }
+
+      .dot:after {
+        left: 15px;
+        transition: left .3s ease-out;
+      }
+
+      .dots:hover .dot:before {
+        right: -15px;
+      }
+
+      .dots:hover .dot:after {
+        left: -15px;
+      }
+      .vertical{
+        width:2px;
+        height:90px;
+        left:110px;
+      }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="/static/simple-green-stamp@2x.png" style="top: 0px;left: 10px;width: 80px;height: 80px;opacity: 1;">
+    <a href="#" style=" padding-left:40px;top: 0px;left: 116px;height: 26px;text-align: left;letter-spacing: 0px;color: #4F4F58;opacity: 1;">Projects</a>
+   <a href="#"  style="padding-left:920px;top: 0px;left: 450px;width: 24px;height: 25px; opacity: 1"><img src="/static/bell.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 500px;width: 24px;height: 25px; opacity: 1;"><img src="/static/user.svg"></a>
+   <a href="#"  style="padding-left:100px;top: 0px;left: 550px;width: 24px;height: 27px;opacity: 1;"><img src="/static/chat.svg"></a>
+   
+</nav>
+
+<div class="card-deck">
+  <div class="card" style="top:40px;left:110px;width:60px;height:180px;background:#FFFFFF;box-shadow:0px 6px 30px #DBE6EBCC;border-radius:10px">
+    <div class="card-body" style="padding-left:30px">
+      <h3 class="card-title" style="font:Helvetica Neue;color:#4F4F58">Your on-going projects</h3>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 1</b></p>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 2</b></p>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 3</b></p>
+      <a href="#" class="dots">
+        <div class="dot"></div>
+      </a>
+    </div>
+  </div>
+  <div class="card" style="top:40px;left:110px;width:60px;height:180px;background:#FFFFFF;box-shadow:0px 6px 30px #DBE6EBCC;border-radius:10px">
+    <div class="card-body" style="padding-left:30px">
+      <h3 class="card-title">Your old projects</h3>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 1</b></p>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 2</b></p>
+      <p class="card-text" style ="text-decoration:underline;color:#28AA8E;"><b>- Project Name 3</b></p>
+      <a href="#" class="dots">
+        <div class="dot"></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="card-deck">
+  <div class="card" style="top:80px;left:110px;width:40px;height:500px;background: #FFFFFF;box-shadow: 0px 6px 30px #DBE6EBCC;border-radius: 10px;">
+    <div class="card-body" style="padding-left:30px;padding-top:20px">
+      <h5 class="card-title text-muted">Update available</h5>
+      <h3 class="card-title"> Project Name 1</h3>
+      <ul style="font:Helvetica Neue;font-size:16px;color:4F4F58;text-align:left">
+        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</li>
+      </ul>
+      <a href="#" class="dots">
+        <div class="dot" style="top:460px;left:350px"></div>
+      </a>
+    </div>
+  </div>
+  <div class="card" style="top:80px;left:110px;width:40px;height:500px;background: #FFFFFF;box-shadow: 0px 6px 30px #DBE6EBCC;border-radius: 10px;">
+    <div class="card-body" style="padding-left:30px;padding-top:20px">
+      <h5 class="card-title text-muted">Open Tickets</h5>
+      <h3 class="card-title">Project Name 2</h3>
+      <ul>
+        <li style="font: Bold Helvetica Neue;font-size:16px;color:4F4F58">Lorem Ipsum<br>is simply dummy text of the printing and typesetting industry.</li>
+        <p class="text-muted" style="left:360px;padding-left:200px;font-size:12px;font-style:Italic">12 Aug 2020; 09:22</p>
+        <li style="font: Bold Helvetica Neue;font-size:16px;color:4F4F58">Lorem Ipsum<br>is simply dummy text of the printing and typesetting industry.</li>
+        <p class="text-muted" style="left:360px;padding-left:200px;font-size:12px;font-style:Italic">12 Aug 2020; 09:22</p>
+        <li style="font: Bold Helvetica Neue;font-size:16px;color:4F4F58">Lorem Ipsum<br>is simply dummy text of the printing and typesetting industry.</li>
+        <p class="text-muted" style="left:360px;padding-left:200px;font-size:12px;font-style:Italic">12 Aug 2020; 09:22</p>
+      </ul>
+       <a href="#" class="dots">
+        <div class="dot" style="top:460px;left:350px"></div>
+      </a>
+    </div>
+  </div>
+  <div class="card" style="top:80px;left:110px;width:40px;height:500px;background: #FFFFFF;box-shadow: 0px 6px 30px #DBE6EBCC;border-radius: 10px;">
+    <div class="card-body" style="padding-left:30px;padding-top:20px">
+      <h5 class="card-title text-muted">Server Down</h5>
+      <h3 class="card-title">Project Name 3</h3>
+      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <a href="#" class="dots">
+        <div class="dot" style="top:460px;left:350px"></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar">
+<ul class="nav flex-column" style="top: 0px;left: 0px;width: 80px;height: 769px;background: #FFFFFF 0% 0% no-repeat padding-box;opacity: 1;" onclick()="projects.html">
+  <li class="nav-item">
+    <a class="nav-link active" href="#" style="top: 30px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/dashboard.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"style="top: 80px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/analytics.svg"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"style="top: 125px;left: 5px;width: 24px;height: 25px;opacity: 1;"><img src="/static/calendar.svg"></a>
+  </li>
+</ul>
+</div>
+</body>
+</html>
